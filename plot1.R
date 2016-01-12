@@ -4,11 +4,11 @@
 library(readr) 
 
 # Set the working directory
-setwd("C:/Users/first/Documents/RProgramming/ExploratoryDataAnalysis")
+setwd("C:/Users/David/Documents/RProgramming/ExploratoryDataAnalysis/ExData_Plotting1")
 
 # Download the data
 link <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
-download.file(link, "powerConsumption")
+download.file(link, "powerConsumption.zip")
 
 # Unzip the data
 unzip("powerConsumption")

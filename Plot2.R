@@ -15,7 +15,7 @@ data2 <- data[, -c(1,2)]
 data2$DateAndTime <- strptime(paste(data$Date, data$Time), "%e/%m/%Y %H:%M:%S")
 
 # Construct plot2
-plot(data2$Global_active_power,     type="l", 
+plot(data2$DateAndTime, data2$Global_active_power,     type="l", 
                                     ylab = "Global Active Power (kilowatts)", 
                                     xlab = "",
                                     main = ""
@@ -25,7 +25,7 @@ plot(data2$Global_active_power,     type="l",
 png("plot2.png")
 
 # Reconstruct the plot
-plot(data2$Global_active_power,     type="l", 
+plot(data2$DateAndTime, data2$Global_active_power,     type="l", 
      ylab = "Global Active Power (kilowatts)", 
      xlab = "",
      main = ""

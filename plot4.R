@@ -18,35 +18,34 @@ data2$DateAndTime <- strptime(paste(data$Date, data$Time), "%e/%m/%Y %H:%M:%S")
 op <- par(mfrow=c(2,2))
 
 # Construct the 1st graph
-plot(data2$Global_active_power,     type="l", 
+plot(data2$DateAndTime, data2$Global_active_power,     type="l", 
      ylab = "Global Active Power (kilowatts)", 
      xlab = "",
      main = ""
 )
 
 # Construct the second graph
-plot(data2$Global_reactive_power,     type="l", 
-     ylab = "Global_reactive_power (kilowatts)", 
+plot(data2$DateAndTime, data2$Voltage,     type="l", 
+     ylab = "Voltage", 
      xlab = "datetime",
      main = ""
 )
 
 # Construct the third graph
-plot(data2$Sub_metering_1,          type="l", 
+plot(data2$DateAndTime, data2$Sub_metering_1,          type="l", 
      ylab = "Global Active Power (kilowatts)", 
      xlab = "",
      main = ""
 )
 # Add the other two lines
-lines(data2$Sub_metering_2, col = "red")
-lines(data2$Sub_metering_3, col = "blue")
+lines(data2$DateAndTime, data2$Sub_metering_2, col = "red")
+lines(data2$DateAndTime, data2$Sub_metering_3, col = "blue")
 # Add the legend
 legend("topright", bty="n", col = c("black", "red", "blue"), lty = 1, lwd=1, legend = c("sub_metering_1", "sub_metering_2", "sub_metering_3"))
 
 # Construct the fourth graph
-# Construct the second graph
-plot(data2$Voltage,     type="l", 
-     ylab = "Voltage", 
+plot(data2$DateAndTime, data2$Global_reactive_power,     type="l", 
+     ylab = "Global_reactive_power (kilowatts)", 
      xlab = "datetime",
      main = ""
 )
@@ -68,35 +67,34 @@ png("plot4.png")
 op <- par(mfrow=c(2,2))
 
 # Construct the 1st graph
-plot(data2$Global_active_power,     type="l", 
+plot(data2$DateAndTime, data2$Global_active_power,     type="l", 
      ylab = "Global Active Power (kilowatts)", 
      xlab = "",
      main = ""
 )
 
 # Construct the second graph
-plot(data2$Global_reactive_power,     type="l", 
-     ylab = "Global_reactive_power (kilowatts)", 
+plot(data2$DateAndTime, data2$Voltage,     type="l", 
+     ylab = "Voltage", 
      xlab = "datetime",
      main = ""
 )
 
 # Construct the third graph
-plot(data2$Sub_metering_1,          type="l", 
+plot(data2$DateAndTime, data2$Sub_metering_1,          type="l", 
      ylab = "Global Active Power (kilowatts)", 
      xlab = "",
      main = ""
 )
 # Add the other two lines
-lines(data2$Sub_metering_2, col = "red")
-lines(data2$Sub_metering_3, col = "blue")
+lines(data2$DateAndTime, data2$Sub_metering_2, col = "red")
+lines(data2$DateAndTime, data2$Sub_metering_3, col = "blue")
 # Add the legend
 legend("topright", bty="n", col = c("black", "red", "blue"), lty = 1, lwd=1, legend = c("sub_metering_1", "sub_metering_2", "sub_metering_3"))
 
 # Construct the fourth graph
-# Construct the second graph
-plot(data2$Voltage,     type="l", 
-     ylab = "Voltage", 
+plot(data2$DateAndTime, data2$Global_reactive_power,     type="l", 
+     ylab = "Global_reactive_power (kilowatts)", 
      xlab = "datetime",
      main = ""
 )
